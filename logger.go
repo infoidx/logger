@@ -27,3 +27,11 @@ func NewLogger(configures ...Configure) *logrus.Logger {
 func WithContext(ctx context.Context) *logrus.Entry {
 	return logrus.NewEntry(defaultLogger).WithContext(ctx)
 }
+
+func GenFields(m map[string]interface{}) logrus.Fields {
+	fields := make(logrus.Fields, len(m))
+	for k, v := range m {
+		fields[k] = v
+	}
+	return fields
+}

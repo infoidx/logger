@@ -20,7 +20,7 @@ var defaultJsonFormatter = &logrus.JSONFormatter{
 	//	fileName := path.Base(frame.File)
 	//	return frame.Function, fileName
 	//},
-	PrettyPrint: true,
+	// PrettyPrint: true,
 }
 
 type jSONFormatterConfigure func(*logrus.JSONFormatter)
